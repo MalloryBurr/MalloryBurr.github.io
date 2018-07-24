@@ -1,0 +1,578 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 
+------------------------------------------------------------------------
+Header
+------------------------------------------------------------------------
+*/
+header
+{
+	background: 
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("https://s33.postimg.cc/bt58klzrj/detroit5.jpg");   
+	height: 450px;
+	background-size: cover;      
+	text-align: center;
+	background-repeat: no-repeat;
+}
+
+h1
+{
+	font-size: 6em;
+	color: white;
+	font-family: 'Mrs Saint Delafield', cursive;
+	text-align: center;
+	line-height: 0.5;
+	text-shadow: 2px 2px 8px #68017F;
+	font-weight: bold;
+}
+
+subheader
+{
+	font-size: 2.5em;
+	color: white;
+	line-height: 0.5;
+	font-family: 'Amatic SC', cursive;
+	text-shadow: 2px 2px 40px black;
+	letter-spacing: 4px;
+}
+
+
+
+
+
+
+/* 
+------------------------------------------------------------------------
+Navigation
+------------------------------------------------------------------------
+*/
+.navbar 
+{
+	font-size: 18px;
+	background: rgb(60,0,108);
+	background: linear-gradient(90deg, rgba(60,0,108,1) 0%, rgba(0,0,0,1) 50%, rgba(0,3,147,1) 100%);
+	padding-bottom: 6px;
+	position: fixed;
+	width: 100%;
+}
+
+#main-nav 
+{
+	list-style-type: none;
+	display: none;
+	flex-direction: column;
+}
+
+#main-nav li 
+{
+	text-align: center;
+	margin: 5px;
+	padding-right: 40px;
+}
+
+.nav-links, .social a
+{
+	text-decoration: none;
+	color: #D0D0D0;
+}
+
+.social a:hover, .nav-links:hover 
+{
+	color: rgba(255, 255, 255, 1);
+}
+
+.social a
+{
+	font-size: 20px;
+	line-height: 30px;
+	padding: 10px;
+}
+
+#navbar-toggle
+{
+	position: absolute;
+	top: 5px;
+	right: 20px;
+	cursor: pointer;
+	color: rgba(255, 255, 255, 0.8);
+	font-size: 24px;
+}
+#navbar-toggle:hover {
+	color: rgba(255, 255, 255, 1);
+}
+
+@media screen and (min-width: 1000px) 
+{
+	.navbar 
+	{
+		display: flex;
+		justify-content: space-between;
+		padding: 0;
+		height: 40px;
+		align-items: center;
+	}
+	
+	#main-nav li 
+	{
+		text-align: center;
+		align: center;
+		margin: 5px;
+	}
+
+	#main-nav 
+	{
+		display: flex !important;
+		flex-direction: row;
+		justify-content: flex-end;
+		text-align: center;
+		align: center;
+	}
+
+	#navbar-toggle 
+	{
+		display: none;
+	}
+}
+
+
+
+
+
+/* 
+------------------------------------------------------------------------
+Main Content
+------------------------------------------------------------------------
+*/
+body 
+{
+	margin: 0;
+	font-family: 'Nanum Gothic', Arial, sans-serif;
+	vertical-align: middle;
+	background: #CDCDCD;
+}
+
+main
+{
+	padding: 80px;
+	margin: 0 auto;
+ 	text-align: center;
+}
+
+h4
+{
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 25px;
+	margin-top: 0;
+}
+
+card 
+{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 70%;
+    border-radius: 5px;
+	background: white;
+	display: inline-block;
+ 	text-align: left;
+	padding: 80px;
+	margin-bottom: 30px;
+	line-height: 2;
+}
+
+card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+intro, experience, education, ec, proj, contact
+{
+	font-size: 2em;
+	text-align: center;
+	font-family: 'Amatic SC', cursive;
+	letter-spacing: 4px;
+	display: inline-block;
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 12px;
+	height: 80px;
+	font-weight: bold;
+}
+
+.date
+{
+	text-align: center;
+	font-style: italic;
+}
+
+
+
+
+
+/* 
+------------------------------------------------------------------------
+Introduction Section
+------------------------------------------------------------------------
+*/
+intro
+{
+	color: #00064A;
+	background: #C1C4FF;
+}
+
+img.me 
+{
+	display: inline;
+	width: 200px;
+	vertical-align: middle;
+	padding: 15px;
+	
+}
+
+.aside 
+{ 
+	display: inline-block;
+	width: 60%;
+	text-align: justify;
+	vertical-align: middle;
+	padding: 15px;
+}
+
+a.contactLink
+{
+	text-decoration: none;
+	color: #358CBC;
+}
+
+a:hover.contactLink
+{
+	color: black;
+}
+
+.columnInfo
+{
+    width: 200px;
+	display: inline-block;
+	margin: 5px;
+	margin-top: 0px;
+	vertical-align: top;
+	text-align: center;
+	flex: 1;
+}
+
+.rowInfo:after 
+{
+    content: "";
+    display: flex;
+    clear: both;
+ 	margin: 0 auto;
+	
+}
+
+
+
+
+
+/* 
+------------------------------------------------------------------------
+Experience Section
+------------------------------------------------------------------------
+*/
+experience
+{
+	color: #3C005B;
+	background: #BEA1CF;
+	margin-bottom: 25px;
+}
+
+.experienceHeader
+{
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+.columnEx, .columnJobs {
+    width: 200px;
+	display: inline-block;
+	margin: 35px;
+	margin-top: 0px;
+	text-align: justify;
+	vertical-align: top;
+}
+
+.colAside
+{
+	display: inline-block;
+	width:70%;
+	vertical-align: middle;
+	text-align: justify;
+}
+
+.percentDisplay, .rightDisplay
+{
+	display: inline; 
+	float: right;
+}
+
+
+  .progressbar 
+{
+	background-color: #F1F1F1;
+	border-radius: 5px; /* (height of inner div) / 2 + padding */
+	height: 10px;
+	margin-bottom: 10px;
+	text-align: left;
+}
+
+	.progressbar > .bar90, .progressbar > .bar85, .progressbar > .bar80, .progressbar > .bar70, .progressbar > .bar60
+	{
+		line-height: 1.2;
+		content: '';
+		display: block;
+		background-color: #DEC6E7;
+		height: 100%;
+		border-radius: 3px;
+	}
+
+	.progressbar > .bar90
+	{	width: 90%;		}
+
+	.progressbar > .bar85
+	{	width: 85%;		}
+
+	.progressbar > .bar80
+	{	width: 80%;		}
+
+	.progressbar > .bar70
+	{	width: 70%;		}
+
+	.progressbar > .bar60
+	{	width: 60%;		}
+
+
+
+
+
+/* 
+------------------------------------------------------------------------
+Education Section
+------------------------------------------------------------------------
+*/
+education
+{
+	color: #8C0057;
+	background:  #FFC8F2;
+	margin-bottom: 25px;
+}
+
+.educationHeader
+{
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+.eduDisplay
+{
+	display: inline; 
+	float: right;
+}
+
+.columnEdu 
+{
+    width: 40%;
+	display: inline-block;
+	margin: 20px;
+	margin-top: 0px;
+	vertical-align: top;
+	text-align: left;
+	flex: 1;
+}
+
+.rowEdu:after 
+{
+    content: "";
+    display: flex;
+    clear: both;
+ 	margin: 0 auto;
+	
+}
+
+
+
+
+
+/* 
+------------------------------------------------------------------------
+Extracurricular Section
+------------------------------------------------------------------------
+*/
+ec
+{
+	color: #6B6400;
+	background: #FFFE91;
+	margin-bottom: 25px;
+}
+
+.ecHeader
+{
+	font-weight: bold;
+	text-align: center;
+}
+
+
+.ecDisplay
+{
+	display: inline; 
+	float: right;
+}
+
+.columnEc
+{
+	display: inline-block;
+	width: 80%;
+	vertical-align: middle;
+	text-align: justify;
+	margin-bottom: 20px;
+}
+
+
+
+
+
+/* 
+------------------------------------------------------------------------
+Project Section
+------------------------------------------------------------------------
+*/
+proj
+{
+	color: #065300;
+	background: #94C592;
+	margin-bottom: 25px;
+}
+
+.educationHeader
+{
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+.ecDisplay
+{
+	display: inline; 
+	float: right;
+}
+
+.columnProj
+{
+    width: 200px;
+	display: inline-block;
+	margin: 5px;
+	margin-top: 0px;
+	vertical-align: top;
+	text-align: center;
+	flex: 1;
+}
+
+.rowProj:after 
+{
+    content: "";
+    display: flex;
+    clear: both;
+ 	margin: 0 auto;
+	
+}
+
+cardproj
+{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 25%;
+	background: #D3DFD2;
+	display: inline-block;
+ 	text-align: center;
+	vertical-align: middle;
+	margin: 10px;
+	line-height: 1;
+    border-radius: 5px; /* 5px rounded corners */
+}
+
+cardproj:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.projImage
+{
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+    border-radius: 5px 5px 0 0;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+	vertical-align: middle;
+    display: table;
+}
+
+.subText
+{
+	padding: 10px;
+}
+
+
+
+
+
+/* 
+------------------------------------------------------------------------
+Footer Section
+------------------------------------------------------------------------
+*/
+
+footer
+{
+	color: #D0D0D0;
+	width: 100%;
+	background: #453C93;
+	vertical-align: middle;
+	text-align:  center;
+	padding: 30px;
+}
+
+.columnFooter
+{
+    width: 200px;
+	display: inline-block;
+	margin: 5px;
+	margin-top: 0px;
+	vertical-align: top;
+	text-align: center;
+	flex: 1;
+}
+
+#footerSection:after 
+{
+    content: "";
+    display: flex;
+    clear: both;
+ 	margin: 0 auto;
+}
+
+#footerSection a:link, #footerSection a:visited
+{
+	text-decoration: none;
+	color: #D0D0D0;
+}
+
+#footerSection a:hover
+{
+	color: rgba(255, 255, 255, 1);
+}
+
+
