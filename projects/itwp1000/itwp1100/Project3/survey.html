@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Detroit Tigers - Survey</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="styles.css" />
+   <script src="modernizr.custom.05819.js"></script>
+</head>
+
+<body>
+<div>
+<h1>Detroit Tigers</h1>
+</div>
+
+<div>
+<hr>
+<a href="index.html">Home Page</a> - <a href="history.html">History of the Team</a> - <a href="retired.html">Hall of Fame Players</a> - <a href="current.html">Current Tiger's Roster</a> - <a href="tickets.html">Get Tickets</a> - <a href="survey.html">Take Survey</a>
+<hr>
+</div>
+
+
+<h2>Complete the Survey for a Discount Code</h2>
+      
+
+	
+
+	<br>
+      <form id="survey">
+         <fieldset>
+            <legend>How Many Games Do You Attend</legend>
+			<br>
+            <label>Home Games&emsp;&emsp;</label>
+            <input id = "homeGames" type="number"/>
+			<br>
+            <label>Away Games&nbsp;&emsp;&emsp;</label>
+            <input id = "awayGames" type="number"/>
+			<br><br>
+			<label>***Home Games and Away Games input are numeric only***</label>
+			<br>
+			<label>***Exception handling added to require input for home and away games***</label>
+			<br><br>
+         </fieldset>
+		 
+		 
+		 <br><br><br>
+		 
+		 
+		 <fieldset>
+            <legend>Vote for Your Favorite Pitcher</legend>
+			<br>
+            <select id="favPlayerSelect" size = 5 required>
+               <option>Matthew Boyd</option>
+			   <option>Buck Farmer</option>
+			   <option>Daniel Norris</option>
+			   <option>Anibal Sanchez</option>
+			   <option>Jordan Zimmermann</option>
+            </select>
+			<br><br>
+			<label>***This is a required field for submitting the survey***</label>
+			<br><br>
+         </fieldset>
+		  
+		  
+		  <br><br><br>
+		  
+		  
+		  <fieldset>
+            <legend>Are you a Season Ticket Holder</legend>
+			<br>
+            <input id="yesbox" type="checkbox" />
+            <label>&emsp;Yes&emsp;&emsp;&emsp;&emsp;&emsp;</label>
+			<input id="nobox" type="checkbox" />
+            <label>&emsp;No</label>
+			<br><br>
+			<label>***Exception handling added to require user to select one box, but not both***</label>
+			<br><br>
+          </fieldset>
+		  
+		  
+		  
+            <br><br>
+            <input onclick="verfiyInput()" type="submit" value="Submit"/>
+			<input id="button" onclick="reset()" type="button" value="Reset Form">
+      </form>
+
+   <br><br>
+
+<script>
+
+function requireGames()
+{
+	if (document.getElementById("homeGames").value === "" || document.getElementById("awayGames").value === "")
+	{
+		alert("\n Your must enter values for home and away games");
+	}
+}
+
+function checkBoxes()
+{
+	if (document.getElementById("yesbox").checked == false && document.getElementById("nobox").checked == false)
+	{
+		alert("\n You must check a box.");
+	}
+
+	if (document.getElementById("yesbox").checked && document.getElementById("nobox").checked)
+	{
+		alert("\n You must check only one box.");
+	}
+	
+}
+
+function showCode()
+{
+	alert("\n The discount code is TIGER17");
+}
+
+
+function verfiyInput()
+{
+	requireGames();
+	checkBoxes();
+	showCode();
+}
+
+function reset()
+{
+	document.getElementById("survey").reset();
+}
+
+</script>
+<br><br>
+<div>
+<hr>
+<p style="text-align:center;">This site is for educational purposes only. No commercial value.</p>
+</div>
+
+<hr>
+<i><a href="../home.html">Back to My Student Homepage</a></i>
+<br>
+
+<a href="mailto:bookworm2426@live.com">Contact Me</a>
+<br>
+<a href="http://validator.w3.org/check?uri=referer" title="HTML5 Validation">HTML5 Validation</a>
+
+<br>
+<hr>
+
+</body>
+</html>

@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Detroit Tigers - Current Tiger's Roster</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="styles.css" />
+   <script src="modernizr.custom.05819.js"></script>
+</head>
+
+<body>
+<div>
+<h1>Detroit Tigers</h1>
+</div>
+
+<div>
+<hr>
+<a href="index.html">Home Page</a> - <a href="history.html">History of the Team</a> - <a href="retired.html">Hall of Fame Players</a> - <a href="current.html">Current Tiger's Roster</a> - <a href="tickets.html">Get Tickets</a> - <a href="survey.html">Take Survey</a> - <a href="feedback.html">Feedback Form</a>
+<hr>
+</div>
+
+<h2>Have you been to more games than me this season?</h2>
+
+<label for="numOfGames">
+  Enter how many games you've been to:
+</label>
+<input type="number" id="numOfGames" />
+<button type="button" id="button">Compare</button>
+
+<br><br><br>
+
+<h2>Who is your favorite starting pitcher?</h2>
+<label for="favPitcher">
+ Enter their number: 
+</label>
+<input type="number" id="favPitcher"/>
+<button type = "button" id = "button2">Find Name</button>
+
+
+<br><br><br>
+
+<img src = "images/tigersSmall.jpg" title = "Tiger's Logo" alt = "Tiger's Logo" height = "100" width = "100">
+
+<div>
+<h2>Current Tiger's Roster</h2>
+
+<p>
+
+
+<b>Starting rotation</b>
+<ul>
+<li>48 Matthew Boyd</li>
+<li>45 Buck Farmer</li>
+<li>44 Daniel Norris</li>
+<li>19 Aníbal Sánchez</li>
+<li>27 Jordan Zimmermann</li>
+</ul>
+<br>
+
+<b>Bullpen</b>
+<ul>
+<li>58 Victor Alcántara</li>
+<li>64 Chad Bell</li>
+<li>66 Jeff Ferrell</li>
+<li>32 Michael Fulmer</li>
+<li>36 Blaine Hardy</li>
+<li>65 Myles Jaye</li>
+<li>77 Joe Jiménez</li>
+<li>63 Jairo Labourt</li>
+<li>57 Artie Lewicki</li>
+<li>26 Zac Reininger</li>
+<li>53 Warwick Saupold</li>
+<li>68 Daniel Stumpf</li>
+<li>54 Drew VerHagen</li>
+<li>30 Alex Wilson</li>
+</ul>
+
+<br>
+
+<b>Closers</b>
+<ul>
+<li>61 Shane Greene</li>
+<li>Catchers</li>
+<li>55 John Hicks</li>
+<li>50 Bryan Holaday</li>
+<li>34 James McCann</li>
+</ul>
+
+<br>
+
+<b>Infielders</b>
+<ul>
+<li>24 Miguel Cabrera</li>
+<li>46 Jeimer Candelario</li>
+<li> 9 Nicholas Castellanos</li>
+<li> 1 José Iglesias</li>
+<li> 3 Ian Kinsler</li>
+<li>49 Dixon Machado</li>
+<li>74 Efren Navarro</li>
+<li>17 Andrew Romine</li>
+</ul>
+
+<br>
+
+<b>Outfielders</b>
+<ul>
+<li>18 Tyler Collins</li>
+<li>40 JaCoby Jones</li>
+<li>15 Mikie Mahtook</li>
+<li>14 Alex Presley</li>
+</ul>
+
+
+</div>
+
+<div>
+<hr>
+<p style="text-align:center;">This site is for educational purposes only. No commercial value.</p>
+</div>
+
+<hr>
+<i><a href="../home.html">Back to My Student Homepage</a></i>
+<br>
+
+<a href="mailto:bookworm2426@live.com">Contact Me</a>
+<br>
+<a href="http://validator.w3.org/check?uri=referer" title="HTML5 Validation">HTML5 Validation</a>
+
+<br>
+<hr>
+
+<script>
+	function calcTotal()
+	{
+		var myGames = 17;
+		var numOfGames = document.getElementById("numOfGames").value;
+
+		if (myGames > numOfGames)
+		{
+			alert("\nI have gone to " + myGames + " which is more than you! " + "\n\nYou need to go to " + (myGames - numOfGames) + " more to match me!");
+			
+		}
+		
+		
+		if (myGames < numOfGames)
+		{
+			alert("\nI have gone to " + myGames + " which is less than you! " + "\n\nI need to go to " + (numOfGames - myGames) + " more to match you!");
+		}
+		if (myGames == numOfGames)
+		{
+			alert("\nI have gone to " + myGames + " which is the same as you!")
+		}
+	}
+	
+	document.getElementById("button").addEventListener("click", calcTotal, false);
+</script>
+
+<script>
+	function findFav()
+	{
+		var playerNum = 0;
+		var userPlayer = document.getElementById("favPitcher").value;
+		
+		switch (userPlayer)
+		{	
+			case "19":
+				alert("\n Your favorite player is Anibal Sanchez, number 19.");
+				break;
+			case "27":
+				alert("\n Your favorite player is Jordan Zimmermann, number 27.");
+				break;
+			case "44":
+				alert("\n Your favorite player is Daniel Norris, number 44.");
+				break;
+			case "45":
+				alert("\n Your favorite player is Buck Farmer, number 45.");
+				break;
+			case "48":
+				alert("\n Your favorite player is Matthew Boyd, number 48.");
+				break;
+			default:
+				alert("\n You entered the number of a player that's not a starting pitcher.");
+		}
+	}
+
+	document.getElementById("button2").addEventListener("click", findFav, false);
+</script>
+
+</body>
+</html>

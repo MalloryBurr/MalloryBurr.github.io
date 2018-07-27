@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Detroit Tigers - Feedback</title>
+<meta charset="utf-8">
+   <script src="modernizr.custom.05819.js"></script>
+</head>
+
+<body>
+<div>
+<h1>Detroit Tigers</h1>
+</div>
+
+<div>
+<hr>
+<a href="index.html">Home Page</a> - <a href="history.html">History of the Team</a> - <a href="retired.html">Hall of Fame Players</a> - <a href="current.html">Current Tiger's Roster</a> - <a href="tickets.html">Get Tickets</a> - <a href="survey.html">Take Survey</a> - <a href="feedback.html">Feedback Form</a>
+<hr>
+</div>
+
+
+<h2>Complete the Feedback Form to Be Entered In A Drawing</h2>
+      
+
+	
+
+	<br>
+      <form id="feedback">
+		  <fieldset>
+            <legend>Select What You Like Most About Our Website</legend>
+			<br>
+			<input id="layout" type="checkbox" />
+            <label>Layout</label>
+			<br>
+			<input id="userFriendly" type="checkbox" />
+            <label>User Friendly</label>
+			<br>
+			<input id="mobileFriendly" type="checkbox" />
+            <label>Mobile Friendly</label>
+			<br>
+			<input id="simple" type="checkbox" />
+            <label>Simple</label>
+			<br>
+			<input id="fast" type="checkbox" />
+            <label>Fast</label>
+			<br>
+			<input id="easyToUnderstand" type="checkbox" />
+            <label>Easy to Understand</label>
+			<br><br>
+			<label for="comments">Comments:</label>
+			<br>
+            <textarea id="comments" placeholder="Enter your comments here (max 250 characters)"></textarea>
+            
+			<br><br>
+			<label>**When the feedback form is submitted, values are added to an array that prints in an alert box**</label>
+		    <br><br>
+         </fieldset>
+		  
+		  
+		  <br><br><br>
+		  
+		  
+		 <fieldset>
+		 
+            <legend>Contact Info</legend>
+            <label>First Name</label>
+            <input type="text" placeholder="First Name" required="required"/>
+			<br>
+            <label>Last Name</label>
+            <input type="text" placeholder="Last Name" required="required"/>
+            <br>
+            <label>Email Address</label>
+            <input type="email" placeholder="Email" required="required"/>
+			<br><br>
+			<label>**These are required fields**</label>
+			<br><br>
+         </fieldset>
+		  
+		  <br><br><br>
+		  
+		  <fieldset>
+			<legend>Submission Rules</legend>
+			<br>Time of submission:
+			<p id = "demo"></p>
+			<br>
+			  Many promotions hold a minimum purchase requirement amount for eligibility.  This amount is the subtotal of the order, calculated before any taxes/shipping fees. This is a fixed dollar amount associated with the code and will not be accepted below the amount. 
+			  Coupon codes are limited to one per customer per purchase and are good for a one time use only per customer and can only be used on full price merchandise. The coupon codes have no cash value and if a return is made, your account will be credited only in the amount that you paid – total amount at checkout less the value of the coupon code. Coupon codes cannot be combined with other promotions. The Detroit Tigers may run promotions designed to attract new customers or increase sales. 
+			  <br><br>
+			  In connection with these promotions, any person that receives credits, coupons, prizes or other benefits from the Detroit Tigers by using multiple user accounts or email addresses, using false names, impersonating others, or through the use of any other fraudulent or misleading conduct, shall forfeit any credits, coupons, prizes or benefits obtained through such means, and may be liable for civil and/or criminal penalties under applicable law. The Detroit Tigers reserve the right to refuse or alter any coupon or promotion at its discretion. The contents of this statement may be altered at any time, at our discretion.
+			  Please note: Coupon codes are not retroactive and price adjustments will not be issued to orders placed prior to the start of any promotion.
+			  <br><br>
+			  Copyright © 2017 by the Office of the Commissioner of Baseball. All rights reserved. No part of the Official Baseball Rules may be reproduced or transmitted in any form or by any means, electronic or mechanical, including photocopy, recording, or any information storage and retrieval system now known or to be invented, without permission in writing from the Office of the Commissioner of Baseball.
+			  <br><br>
+		  </fieldset>
+
+		  
+            <br><br>
+            <input onclick="verfiyInput()" type="submit" value="Submit"/>
+			<input id="button" onclick="reset()" type="button" value="Reset Form">
+      </form>
+
+   <br><br>
+   
+<script>
+	document.getElementById("demo").innerHTML = Date();
+</script>
+
+
+
+<script>
+
+function checkBoxes()
+{
+	if (document.getElementById("layout").checked == false && document.getElementById("userFriendly").checked == false && document.getElementById("mobileFriendly").checked == false && document.getElementById("simple").checked == false && document.getElementById("fast").checked == false)
+	{
+		alert("\n You must check a box.");
+	}
+}
+
+
+function fillString()
+{
+	var likes = "";
+	
+
+	if (document.getElementById("layout").checked)
+	{
+		likes = "layout, ";
+	}
+	
+	if (document.getElementById("userFriendly").checked)
+	{
+		likes = likes + "user friendly, ";
+	}
+	
+	if (document.getElementById("mobileFriendly").checked)
+	{
+		likes = likes + "mobile friendly, ";
+	}
+	
+	if (document.getElementById("simple").checked)
+	{
+		likes = likes + "simple, ";
+	}
+	
+	if (document.getElementById("fast").checked)
+	{
+		likes = likes + "fast, ";
+	}
+	
+	var stringLike = String(likes);
+	
+	alert("Likes selected: " + stringLike);
+}
+
+
+function verfiyInput()
+{
+	checkBoxes();
+	fillString();
+}
+
+function reset()
+{
+	document.getElementById("survey").reset();
+}
+
+</script>
+<br><br>
+<div>
+<hr>
+<p style="text-align:center;">This site is for educational purposes only. No commercial value.</p>
+</div>
+
+<hr>
+<i><a href="../home.html">Back to My Student Homepage</a></i>
+<br>
+
+<a href="mailto:bookworm2426@live.com">Contact Me</a>
+<br>
+<a href="http://validator.w3.org/check?uri=referer" title="HTML5 Validation">HTML5 Validation</a>
+
+<br>
+<hr>
+
+</body>
+</html>

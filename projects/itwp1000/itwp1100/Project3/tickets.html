@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Detroit Tigers - Tickets</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="styles.css" />
+   <script src="modernizr.custom.05819.js"></script>
+</head>
+
+<body>
+<div>
+<h1>Detroit Tigers</h1>
+</div>
+
+<div>
+<hr>
+<a href="index.html">Home Page</a> - <a href="history.html">History of the Team</a> - <a href="retired.html">Hall of Fame Players</a> - <a href="current.html">Current Tiger's Roster</a> - <a href="tickets.html">Get Tickets</a> - <a href="survey.html">Take Survey</a>
+<hr>
+</div>
+
+
+<h2>Form for Season Tickets</h2>
+      
+
+	
+	First Name, Last Name, Street Address, City, and State are text
+	<br>
+	Zip and Phone are numeric only<br><br>
+      <form id="tickets">
+         <fieldset>
+            <legend>Billing Address</legend>
+            <label>First Name</label>
+            <input type="text"/>
+			<br>
+            <label>Last Name</label>
+            <input type="text"/>
+            <br>
+			<label>Street Address</label>
+            <input type="text"/>
+			<br>
+            <label>City</label>
+			<input type="text"/>
+            <br>
+			<label>State</label>
+            <input type ="text">
+			<br>
+            <label>Zip</label>
+            <input type="number"/>
+			<br>
+            <label>Phone</label>
+            <input type="number"/>
+         </fieldset>
+		 <br>
+		 ****EXCEPTION HANDLING ADDED TO CHECK ONLY ONE BOX, AND CHECK AT LEAST ONE****
+		 
+		 <br><br>
+		 <fieldset>
+            <legend>Subscribe to Mailing List</legend>
+            <input id="yesbox" type="checkbox" />
+            <label>Yes</label>
+			<input id="nobox" type="checkbox" />
+            <label>No</label>
+          </fieldset>
+		  
+		  
+		
+	
+            <br><br>
+            <input onclick="checkBoxes()" type="submit" value="Submit"/>
+			<input id="button" onclick="reset()" type="button" value="Reset Form">
+      </form>
+
+   <br><br>
+   <h2>Debugging Methods</h2>
+Include a summary of the debugging methods from Chapter 4 that you incorporated into the form in your website:
+<br><br><br>
+I used several different methods to help me debug my code as I completed the project. One of the main methods was using alerts and simply printing things to the screen. This helps me know whether the program is entering certain functions and blocks of code. I also found it very helpful for being a more obvious way of validating the processing of input. I could validate that my input was correctly taken in, stored, and processed. It was especially helpful for validating my logic on functions and if/else statements. Sometimes with several if statements, it can get confusing just what the code needs to do, and alerts allow me to see when the code is doing what I need it to do.
+<br><br>
+Another big assistance with debugging was NotePad++ itself. There were times I would forget semicolons and curly braces, and it would flag them in a different color. This helped quickly point out my syntax errors, and keep me more organized. I also used the validator tool on w3schools to help catch any other syntax errors. I try to read through my code before turning to the validator, but an extra run through is always helpful. Even if my code is running correctly, there could still be errors.
+
+
+<script>
+
+function checkBoxes()
+{
+	if (document.getElementById("yesbox").checked == false && document.getElementById("nobox").checked == false)
+	{
+		alert("\n You must check a box.");
+	}
+
+
+	if (document.getElementById("yesbox").checked && document.getElementById("nobox").checked)
+	{
+		alert("\n You must check only one box.");
+	}
+	
+}
+
+function reset()
+{
+	document.getElementById("tickets").reset();
+}
+
+</script>
+<br><br>
+<div>
+<hr>
+<p style="text-align:center;">This site is for educational purposes only. No commercial value.</p>
+</div>
+
+<hr>
+<i><a href="../home.html">Back to My Student Homepage</a></i>
+<br>
+
+<a href="mailto:bookworm2426@live.com">Contact Me</a>
+<br>
+<a href="http://validator.w3.org/check?uri=referer" title="HTML5 Validation">HTML5 Validation</a>
+
+
+</body>
+</html>

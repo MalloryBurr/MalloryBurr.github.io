@@ -211,6 +211,8 @@ intro, experience, education, ec, proj, contact
 	font-style: italic;
 }
 
+@media(min-width:60em){html{font-size: 130%}}
+
 
 
 
@@ -534,6 +536,7 @@ cardproj:hover {
 .subText
 {
 	padding: 10px;
+	line-height: 1.3;
 }
 
 

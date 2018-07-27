@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="description" content="Your description goes here" />
+	<meta name="keywords" content="your,keywords,goes,here" />
+	<meta name="author" content="Your Name / Original design by andreasviklund.com" />
+	<link rel="stylesheet" type="text/css" href="redwings.css" title="Basic Noise" media="all" />
+	<title>Red Wings Homepage</title>
+</head>
+
+<body>
+<div id="container980">
+	<div id="header">
+		<h1><a href="index.html">Detroit Red Wings</a></h1>
+		<h2>Hey, Hey, HockeyTown</h2>
+	</div>
+	<div id="menu"> 
+		<ul>     
+			<li><a href="index.html" class="current">Home Page</a></li>
+			<li><a href="page2.html">History of the Team</a></li>
+			<li><a href="page3.html">Notable Players</a></li>
+			<li><a href="page4.html">Hockey Traditions</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+	</div>
+	
+
+	<div id="main">
+		<div id="content">
+								
+				<!-- This begins the secion of added Javascript-->
+				<h2>Welcome to My Website</h2>
+
+				<p>Click the button to get a time-based greeting:</p>
+
+				<button onclick="myFunction()">Try it</button>
+
+				<p id="demo"></p>
+
+				<script>
+				function myFunction() {
+					var greeting;
+					var time = new Date().getHours();
+					if (time < 10) {
+						greeting = "Good morning!";
+					} else if (time < 20) {
+						greeting = "Good day!";
+					} else {
+						greeting = "Good evening!";
+					}
+				document.getElementById("demo").innerHTML = greeting;
+				}
+				</script>
+				<br>
+				<!-- code above taken from: http://www.w3schools.com/js/tryit.asp?filename=tryjs_elseif -->
+				<!-- This ends the section of added JavaScript -->
+		
+			<h2>A Quick Overview</h2>
+			
+			<p>
+			The Detroit Red Wings are a well known and respected ice hockey team based in Detroit, Michigan. The team is one of the Original Six teams of the National Hockey League and are members of the Atlantic Division of the Eastern Conference of the NHL. The team wears a white and red uniform, with the darker of the two uniforms being worn when the team plays at home. As the Red Wings are one of the more established NHL teams, they are known for their dedicated fan base. Detroit is so well known for its hockey team, that the city has gained the name “Hockey Town”, which was made a registered trademark in 1996.
+			<br>
+			</p>
+			
+			<p>
+			<br>
+			As of 2011, the Detroit Red Wings had won the most Stanley Cup championships of any NHL franchise based in the United States, and are third overall in total NHL championships. The team played for 40 years in Olympia stadium, but eventually moved to the Joe Louis arena. The arena, which was cutting edge at the time, seats over 20,000 people. Despite its sprawling size and its well known name, the arena is one of the oldest still in use today, and will be replaced by a new arena in the coming years.
+			</p>
+			
+		</div>
+	</div>
+
+	<div id="credits">
+		<a href="../../index.htm">Back to my Student Home Page</a>
+		<br>
+		<span class="small">Template taken from <a href="http://andreasviklund.com/dt_portfolio/basic-noise/">andreasviklund.com</a></span>
+	</div>
+</div>
+</body>
+</html>
