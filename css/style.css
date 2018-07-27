@@ -9,7 +9,7 @@ Header
 header
 {
 	background: 
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://s33.postimg.cc/bt58klzrj/detroit5.jpg");   
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("detroit.jpg");   
 	height: 450px;
 	background-size: cover;      
 	text-align: center;
@@ -154,10 +154,12 @@ body
 	margin: 0;
 	font-family: 'Nanum Gothic', Arial, sans-serif;
 	vertical-align: middle;
-	background-image: url("../images/back5.png");
+	background-image: url("../images/blurBack.jpg");
 	font-size: 18px;
 	background-attachment: fixed;
     background-position: center; 
+    background-repeat: no-repeat;
+	background-size: cover;
 }
 
 main
