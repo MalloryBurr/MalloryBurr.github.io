@@ -108,6 +108,7 @@ Navigation
 {
 	.navbar 
 	{
+		font-size: 20px;
 		display: flex;
 		justify-content: space-between;
 		padding: 0;
@@ -153,8 +154,10 @@ body
 	margin: 0;
 	font-family: 'Nanum Gothic', Arial, sans-serif;
 	vertical-align: middle;
-	background: #CDCDCD;
+	background-image: url("../images/back5.png");
 	font-size: 18px;
+	background-attachment: fixed;
+    background-position: center; 
 }
 
 main
@@ -210,8 +213,6 @@ intro, experience, education, ec, proj, contact
 	text-align: center;
 	font-style: italic;
 }
-
-@media(min-width:60em){html{font-size: 130%}}
 
 
 
