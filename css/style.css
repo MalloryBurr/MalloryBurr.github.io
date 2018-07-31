@@ -409,6 +409,7 @@ education
     display: flex;
     clear: both;
  	margin: 0 auto;
+	wisth:90%;
 }
 
 
@@ -508,7 +509,7 @@ cardproj
 	background: #D3DFD2;
 	display: inline-block;
  	text-align: center;
-	vertical-align: middle;
+	vertical-align: top;
 	margin: 10px;
 	line-height: 1;
     border-radius: 5px; /* 5px rounded corners */
@@ -524,6 +525,7 @@ cardproj:hover {
 	padding: 0px;
 	margin: 0px;
     border-radius: 5px 5px 0 0;
+	border-bottom: 1px solid #CBC9C9;
 }
 
 .clearfix::after {
