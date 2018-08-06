@@ -1,0 +1,229 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/scrubbedTemplate.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+	
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11"/>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>TSG- Search</title>
+<link href="../css/sortTable.css" rel="stylesheet" type="text/css">
+<!-- InstanceEndEditable -->
+<link href="../css/template.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Bowlby+One+SC" rel="stylesheet">
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+
+<!-- BEGIN BODY -->
+<body bottommargin="0" topmargin="0" rightmargin="0" leftmargin="0">
+
+<!-- Begin Header -->
+<header>
+	<logoleft style="line-height: .5;">
+		<a target="_blank" href="#"><img src="../images/RobotLogo100.jpg" alt= "" style="border-width:0px;border-style:solid;" /></a>
+	</logoleft>
+	
+	<mainheader>
+		<a href="../index.html" ><h1>Technical  Support  Group</h1></a>
+		<a target="_blank" href="#">TSL</a>
+		&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a target="_blank" href="#">Hotline Folder</a>
+		&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="contactUs.html">Contact Us</a>
+	</mainheader>
+		
+	<logoright>
+		<img src="../images/UpperRightOne.jpg" alt =""  border="0"><br>
+		<small style="float: right;">Best Viewed in Chrome or Edge&nbsp;</small>
+	</logoright> 
+</header>
+	
+<!-- Begin navigation -->
+<div class="navBack">
+	<nav id="primary_nav_wrap">
+		<ul>
+			<li><a href="../index.html">Home</a></li>
+
+			<li><a href="search.html">Search</a></li>
+
+			<li><a href="asi.html">ASI</a></li>
+
+			<li><a href="robots.html">Robots</a></li>
+
+			<li><a href="pc.html">PC</a></li>
+
+			<li><a href="#">Applications</a></li>
+			
+			<li>
+				<a href="#">Dropdown Example</a>
+				<ul>
+					<li><a href="#">Item</a></li>
+					<li><a href="#">Item</a></li>
+					<li>
+						<a href="#">Dropdown1</a>
+						<ul>
+							<li><a href="#">Item</a></li>
+							<li><a href="#">Item</a></li>
+							<li>
+								<a href="#">Dropdown2</a>
+								<ul>
+									<li><a href="#">Item</a></li>
+									<li><a href="#">Item</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+</div>
+<!-- End Header  ------>
+	
+	
+<!-- Add some spacing below header -->
+<br><br><br>
+	
+<div id="main">
+<!-- InstanceBeginEditable name="editMain" -->
+	<br>
+	<div id="subHeader">
+		<h3>Search</h3>
+	</div>
+    <br><br><br><br>
+	
+	<div width="85%" align="center">
+		Click the headers to sort the table<br>
+		The first time you click, the sorting direction is ascending.   
+		Click again, and the sorting direction will be descending.
+	</div>
+	
+	<br><br>
+
+	
+	<table id="sort" width="85%" align="center">
+				<tr>
+					<th onclick="sortFunction(0)">Part Number</th>
+					<th align="left" onclick="sortFunction(1)">Part Name</th>
+				</tr>
+				
+				<tr>
+					<td>5</td>
+					<td>Bolts</td>
+				</tr>
+				
+				<tr>
+					<td>4</td>
+					<td>Nuts</td>
+				</tr>
+				
+				<tr>
+					<td>2</td>
+					<td>Assembly</td>
+				</tr>
+				
+				<tr>
+					<td>1</td>
+					<td>Motor</td>
+				</tr>
+					
+				<tr>
+					<td>6</td>
+					<td>Steel Plate</td>
+				</tr>
+				
+				<tr>
+					<td>8</td>
+					<td>Aluminum Plate</td>
+				</tr>
+				
+				<tr>
+					<td>7</td>
+					<td>Belt</td>
+				</tr>
+			</table>
+			
+			<br><br>
+    
+	
+<script>
+	function sortFunction(n) {
+		var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+		table = document.getElementById("sort");
+		switching = true;
+		//Set the sorting direction to ascending:
+		dir = "asc"; 
+		/*Make a loop that will continue until
+		no switching has been done:*/
+		while (switching) {
+			//start by saying: no switching is done:
+			switching = false;
+			rows = table.getElementsByTagName("TR");
+			/*Loop through all table rows (except the
+			first, which contains table headers):*/
+			for (i = 1; i < (rows.length - 1); i++) {
+				//start by saying there should be no switching:
+				shouldSwitch = false;
+				/*Get the two elements you want to compare,
+				one from current row and one from the next:*/
+				x = rows[i].getElementsByTagName("TD")[n];
+				y = rows[i + 1].getElementsByTagName("TD")[n];
+				/*check if the two rows should switch place,
+				based on the direction, asc or desc:*/
+					if (dir == "asc") 
+					{
+						if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) 
+						{
+							//if so, mark as a switch and break the loop:
+							shouldSwitch= true;
+							break;
+						}
+					}
+				
+				else if (dir == "desc") 
+				{
+					if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) 
+					{
+						//if so, mark as a switch and break the loop:
+						shouldSwitch = true;
+						break;
+					}
+				}
+			}
+			
+			if (shouldSwitch) 
+			{
+				/*If a switch has been marked, make the switch
+				and mark that a switch has been done:*/
+				rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+				switching = true;
+				//Each time a switch is done, increase this count by 1:
+				switchcount ++;      
+			} 
+			
+			else 
+			{
+				/*If no switching has been done AND the direction is "asc",
+				set the direction to "desc" and run the while loop again.*/
+				if (switchcount == 0 && dir == "asc") 
+				{
+					dir = "desc";
+					switching = true;
+				}
+			}
+		}
+	}
+</script>
+<!-- InstanceEndEditable --></div>
+
+<br><br>
+	
+<!-- FOOTER -->
+<div align="center" text-align="center">
+	<footer>Best Viewed in Google Chrome or Microsoft Edge</footer>
+</div>
+	
+<br><br>
+	
+</body>
+<!-- InstanceEnd --></html>

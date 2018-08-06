@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+
+#sort table {
+	align: center;
+}
+
+#sort th{
+    background-color: #E1E1E1;
+}
+
+#sort th, #sort td{
+    padding: 10px;
+}
+
+#sort td:nth-child(odd) {
+	text-align: center;
+	width: 15%;
+}
+
+#sort td:nth-child(even), #sort th:nth-child(even) {
+	padding-left: 50px;
+}
+
+#sort tr:nth-child(odd) {
+    background-color: #f2f2f2
+}

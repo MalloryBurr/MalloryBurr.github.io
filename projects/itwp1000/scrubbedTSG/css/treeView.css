@@ -1,0 +1,91 @@
+@charset "utf-8";
+/* CSS Document */
+/* Styling for treeview on index.html */
+.css-treeview
+{
+	overflow: auto;
+	line-height: 1.6;
+	height: 50em;
+}
+
+.css-treeview ul,
+.css-treeview li
+{
+    padding: .25em;
+    margin: 0;
+    list-style: none;
+	font-size: 14px;
+}
+
+.css-treeview input
+{
+    position: absolute;
+    opacity: 0;
+}
+
+.css-treeview a
+{
+    color: #8C0002;
+    text-decoration: none;
+}
+
+.css-treeview a:hover
+{
+	color: black;
+}
+
+.css-treeview input + label + ul
+{
+    margin: 0 0 0 22px;
+}
+
+.css-treeview input ~ ul
+{
+    display: none;
+}
+
+.css-treeview label,
+.css-treeview label::before
+{
+    cursor: pointer;
+}
+
+.css-treeview input:checked:not(:disabled) ~ ul
+{
+    display: block;
+}
+
+.css-treeview label,
+.css-treeview label::before
+{
+    background: url("../images/icons.png") no-repeat;
+}
+
+.css-treeview label,
+.css-treeview a,
+.css-treeview label::before
+{
+    display: inline-block;
+    height: 16px;
+    line-height: 16px;
+    vertical-align: middle;
+}
+
+.css-treeview label
+{
+    background-position: 18px 0;
+}
+
+.css-treeview label::before
+{
+    content: "";
+    width: 16px;
+    margin: 0 22px 0 0;
+    vertical-align: middle;
+    background-position: 0 -32px;
+}
+
+.css-treeview input:checked + label::before
+{
+    background-position: 0 -16px;
+}
