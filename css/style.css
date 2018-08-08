@@ -16,12 +16,6 @@ header
 	background-repeat: no-repeat;
 }
 
-@media screen and (max-width: 800px) {
-  html {
-    width: 130%; /* The width is 100%, when the viewport is 1200px or smaller */
-  }
-}
-
 h1
 {
 	font-size: 6em;
@@ -58,7 +52,8 @@ Navigation
 	font-size: 18px;
 	background: rgb(60,0,108);
 	background: linear-gradient(90deg, rgba(60,0,108,1) 0%, rgba(0,0,0,1) 50%, rgba(0,3,147,1) 100%);
-	padding-bottom: 6px;
+	padding-top: 1.5%;
+	padding-bottom: 1.5%;
 	position: fixed;
 	width: 100%;
 }
@@ -100,14 +95,23 @@ Navigation
 #navbar-toggle
 {
 	position: absolute;
-	top: 5px;
 	right: 20px;
 	cursor: pointer;
 	color: rgba(255, 255, 255, 0.8);
 	font-size: 120%;
+	vertical-align: middle;
 }
 #navbar-toggle:hover {
 	color: rgba(255, 255, 255, 1);
+}
+
+@media screen and (max-width: 1100px) 
+{
+	#main-nav li, .navbar, #main-nav, #navbar-toggle
+	{
+		font-size: 130%;
+		
+	}
 }
 
 @media screen and (min-width: 1100px) 
@@ -140,7 +144,6 @@ Navigation
 	{
 		display: none;
 		font-size: 130%;
-		line-height: 5;
 	}
 }
 
