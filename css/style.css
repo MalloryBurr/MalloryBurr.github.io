@@ -483,6 +483,7 @@ proj
 .columnProj
 {
     width: 200px;
+	height: 200px;
 	display: inline-block;
 	margin: 5px;
 	margin-top: 0px;
@@ -531,7 +532,7 @@ cardproj:hover {
 .clearfix::after {
     content: "";
     clear: both;
-	vertical-align: middle;
+	vertical-align: top;
     display: table;
 }
 
