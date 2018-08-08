@@ -18,7 +18,7 @@ header
 
 @media screen and (max-width: 800px) {
   html {
-    width: 130%; /* The width is 100%, when the viewport is 800px or smaller */
+    width: 130%; /* The width is 100%, when the viewport is 1200px or smaller */
   }
 }
 
