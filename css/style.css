@@ -16,6 +16,12 @@ header
 	background-repeat: no-repeat;
 }
 
+@media screen and (max-width: 800px) {
+  html {
+    width: 130%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
+
 h1
 {
 	font-size: 6em;
