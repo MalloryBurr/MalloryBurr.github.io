@@ -113,6 +113,11 @@ Navigation
 		font-size: 130%;
 	}
 	
+	body
+	{
+		font-size: 150%;
+	}
+	
 	.navbar, #main-nav, #navbar-toggle
 	{
 		font-size: 150%;
@@ -199,7 +204,7 @@ card
 {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    width: 75%;
+    width: 85%;
     border-radius: 5px;
 	background: white;
 	display: inline-block;
@@ -577,7 +582,7 @@ footer
 	background: #453C93;
 	vertical-align: middle;
 	text-align:  center;
-	padding: 30px;
+	padding: 1.5%;
 }
 
 
