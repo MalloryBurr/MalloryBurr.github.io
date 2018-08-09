@@ -324,10 +324,10 @@ experience
 	vertical-align: top;
 }
 
-.colAside
+.expDiv
 {
 	display: inline-block;
-	width:70%;
+	width: 70%;
 	vertical-align: middle;
 	text-align: justify;
     -moz-text-align-last: center;
