@@ -37,6 +37,11 @@ subheader
 	letter-spacing: 4px;
 }
 
+body
+{
+	font-size: 18px;
+}
+
 
 
 
@@ -113,19 +118,19 @@ Navigation
 		font-size: 130%;
 	}
 	
-	body
+	card
 	{
-		font-size: 150%;
+		font-size: 100%;
 	}
 	
-	.navbar, #main-nav, #navbar-toggle
+	.navbar
 	{
 		font-size: 150%;
 	}
 	
 	card 
 	{
-		width: 90%;
+		width: 120%;
 	}
 }
 
@@ -507,13 +512,11 @@ proj
 .columnProj
 {
     width: 200px;
-	height: 200px;
 	display: inline-block;
 	margin: 5px;
 	margin-top: 0px;
 	vertical-align: top;
 	text-align: center;
-	flex: 1;
 }
 
 .rowProj:after 
