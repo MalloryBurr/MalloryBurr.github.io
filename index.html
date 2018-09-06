@@ -136,22 +136,22 @@
 				
 				C++		<div class="percentDisplay">80%</div>
 				<div class="progressbar">
-					<div class="bar80"></div>
+					<div class="bar"></div>
 				</div>
 				
 				Java		<div class="percentDisplay">80%</div>
 				<div class="progressbar">
-					<div class="bar80"></div>
+					<div class="bar"></div>
 				</div>
 				
 				C#			<div class="percentDisplay">70%</div>
 				<div class="progressbar">
-					<div class="bar70"></div>
+					<div class="bar"></div>
 				</div>
 				
 				Python		<div class="percentDisplay">70%</div>
 				<div class="progressbar">
-					<div class="bar70"></div>
+					<div class="bar"></div>
 				</div>
 			</div>
 			
@@ -160,22 +160,22 @@
 				
 				CSS		<div class="percentDisplay">80%</div>
 				<div class="progressbar">
-					<div class="bar80"></div>
+					<div class="bar"></div>
 				</div>
 				
 				HTML	<div class="percentDisplay">80%</div>
 				<div class="progressbar">
-					<div class="bar80"></div>
+					<div class="bar"></div>
 				</div>
 				
 				JavaScript		<div class="percentDisplay">70%</div>
 				<div class="progressbar">
-					<div class="bar70"></div>
+					<div class="bar"></div>
 				</div>
 				
-				JQuery		<div class="percentDisplay">70%</div>
+				JQuery		<div class="percentDisplay">72%</div>
 				<div class="progressbar">
-					<div class="bar70"></div>
+					<div class="bar"></div>
 				</div>
 			</div>
 			
@@ -184,22 +184,22 @@
 				
 				Visual Studio		<div class="percentDisplay">90%</div>
 				<div class="progressbar">
-					<div class="bar90"></div>
+					<div class="bar"></div>
 				</div>
 				
 				Dreamweaver	<div class="percentDisplay">90%</div>
 				<div class="progressbar">
-					<div class="bar90"></div>
+					<div class="bar"></div>
 				</div>
 				
 				NetBeans		<div class="percentDisplay">80%</div>
 				<div class="progressbar">
-					<div class="bar80"></div>
+					<div class="bar"></div>
 				</div>
 				
 				Android Studio		<div class="percentDisplay">70%</div>
 				<div class="progressbar">
-					<div class="bar70"></div>
+					<div class="bar"></div>
 				</div>
 			</div>
 		</div>
@@ -342,24 +342,24 @@
 </footer>
 	
 	
+<script language="javascript" src="js/jquery.js"></script>
 <script>
-	let mainNav=document.getElementById('main-nav');
-	let navbarToggle=document.getElementById('navbar-toggle');
-	navbarToggle.addEventListener
-	('click',function()
-	{
-		if(this.classList.contains('active'))
-		{
-			mainNav.style.display="none";
-			this.classList.remove('active');
-		}
-		else
-		{
-			mainNav.style.display="flex";
-			this.classList.add('active');
-		}
-	}
-	);
+    $(function() {
+        // pull percentages out and make our progress bars match because laziness is a virtue
+        // and why write something twice?  that's two times for a human to f*ck up.
+        $('.bar').each(function() {
+            $(this).css('width', $(this).parent().prev().html());
+        });
+        
+        // install our show/hide handler
+        $('#main-nav').click(function() {
+            if ($(this).hasClass('active')) {
+                $(this).removeClass('active').css('display', 'hidden');
+            } else {
+                $(this).addClass('active').css('display', 'flex');
+            }
+        });
+    });
 </script>
 </body>
 </html>

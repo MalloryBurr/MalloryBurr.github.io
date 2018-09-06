@@ -361,8 +361,7 @@ experience
 }
 
 
-  .progressbar 
-{
+.progressbar {
 	background-color: #F1F1F1;
 	border-radius: 5px; /* (height of inner div) / 2 + padding */
 	height: 10px;
@@ -370,35 +369,14 @@ experience
 	text-align: left;
 }
 
-	.progressbar > .bar90, .progressbar > .bar85, .progressbar > .bar80, .progressbar > .bar70, .progressbar > .bar60
-	{
-		line-height: 1.2;
-		content: '';
-		display: block;
-		background-color: #DEC6E7;
-		height: 100%;
-		border-radius: 3px;
-	}
-
-	.progressbar > .bar90
-	{	width: 90%;		}
-
-	.progressbar > .bar85
-	{	width: 85%;		}
-
-	.progressbar > .bar80
-	{	width: 80%;		}
-
-	.progressbar > .bar70
-	{	width: 70%;		}
-
-	.progressbar > .bar60
-	{	width: 60%;		}
-
-
-
-
-
+.progressbar > .bar {
+    line-height: 1.2;
+    content: '';
+    display: block;
+    background-color: #DEC6E7;
+    height: 100%;
+    border-radius: 3px;
+}
 /* 
 ------------------------------------------------------------------------
 Education Section
