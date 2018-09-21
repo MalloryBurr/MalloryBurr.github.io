@@ -353,9 +353,11 @@
         // install our show/hide handler
         $('#main-nav').click(function() {
             if ($(this).hasClass('active')) {
-                $(this).removeClass('active').css('display', 'hidden');
+                $('#main-nav').hide();
+                $(this).removeClass('active');
             } else {
-                $(this).addClass('active').css('display', 'flex');
+                $(this).addClass('active');
+                $('#main-nav').css('display', 'flex');
             }
         });
     });
