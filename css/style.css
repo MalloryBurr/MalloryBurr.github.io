@@ -115,7 +115,7 @@ Navigation
 {
 	#main-nav li
 	{
-		font-size: 130%;
+		font-size: 100%;
 	}
 	
 	card
@@ -220,7 +220,7 @@ card
 	display: inline-block;
  	text-align: left;
 	padding: 5%;
-	margin-bottom: 30px;
+	margin-bottom: 60px;
 	line-height: 2;
 }
 
