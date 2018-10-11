@@ -301,6 +301,8 @@ a:hover.contactLink
 	vertical-align: top;
 	text-align: center;
 	flex: 1;
+	padding-right: 30px;
+	padding-left: 30px;
 }
 
 .rowInfo:after 
@@ -351,7 +353,8 @@ experience
 	vertical-align: middle;
 	text-align: justify;
     -moz-text-align-last: center;
-    text-align-last: center;
+	text-align-last: center;
+	padding-bottom: 40px;
 }
 
 .percentDisplay, .rightDisplay
