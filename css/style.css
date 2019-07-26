@@ -14,6 +14,7 @@ header
 	background-size: cover;      
 	text-align: center;
 	background-repeat: no-repeat;
+	box-shadow: inset 0px -40px 30px -10px black; 
 }
 
 h1
@@ -186,7 +187,7 @@ body
 	margin: 0;
 	font-family: 'Nanum Gothic', Arial, sans-serif;
 	vertical-align: middle;
-	background-image: url("../images/blurBack.jpg");
+	background-image: url("../images/brickBack.jpg");
 	font-size: 18px;
 	background-attachment: fixed;
     background-position: center; 
@@ -203,7 +204,7 @@ main
 
 h4
 {
-	font-size: 18px;
+	font-size: 20px;
 	font-weight: bold;
 	text-align: center;
 	margin-bottom: 25px;
@@ -558,7 +559,7 @@ Footer Section
 footer
 {
 	color: #D0D0D0;
-	background: #453C93;
+	background: rgba(60,0,108,1);
 	vertical-align: middle;
 	text-align:  center;
 	padding: 1.5%;
